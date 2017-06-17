@@ -74,7 +74,7 @@ window.addEventListener("load", function() {
 			if ((pageNow + 1) <= pageAll) {
 				pageNow += 1;
 				animation.move(pageNow);
-			}else{
+			} else {
 				pageNow = 1;
 				animation.move(pageNow);
 			}
@@ -108,14 +108,16 @@ window.addEventListener("load", function() {
 			for (var i = 0; i < sectionList.length; i++) {
 				sectionList[i].style.height = height + "px";
 			}
+			animation.move(pageNow);
 		}
 	};
 	//鼠标滚轮事件
 	var mousewheelEvent = function(event) {
 		if (animation.scrolling) return false;
-		if (event.wheelDelta > 0) {
+		var delta = event.wheelDelta || -event.detail;
+		if (delta > 0) {
 			animation.up()
-		} else if (event.wheelDelta < 0) {
+		} else if (delta < 0) {
 			animation.down()
 		}
 	};
@@ -138,7 +140,6 @@ window.addEventListener("load", function() {
 		}
 	};
 	//导航点击事件
-	document.addEventListener
 	var clickEvent = function(event) {
 		var key = event.keyCode;
 		switch (key) {
@@ -165,13 +166,26 @@ window.addEventListener("load", function() {
 	}
 	//动画结束后触发
 	page.addEventListener("webkitTransitionEnd", animation.moveEnd);
-	window.addEventListener("resize", resizeEvent);
-	document.addEventListener("mousewheel", mousewheelEvent);
+	if (isFirefox()) {
+		document.addEventListener("DOMMouseScroll", mousewheelEvent);
+	} else {
+		document.addEventListener("mousewheel", mousewheelEvent);
+	};
 	document.addEventListener("keydown", keyboardEvent);
+	window.addEventListener("resize", resizeEvent);
 	//批量设置CSS；参数：元素对象，js描述对象
 	function setStyle(element, descriptionObj) {
 		for (var i in descriptionObj) {
 			element.style[i] = descriptionObj[i] + "";
+		}
+	}
+	//检测是否为火狐浏览器
+	function isFirefox() {
+		var userAgent = navigator.userAgent;
+		if (userAgent.indexOf("Firefox") > -1) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 })
