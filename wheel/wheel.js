@@ -20,6 +20,7 @@ window.addEventListener("load", function() {
 		var li = document.createElement("li");
 		ul.appendChild(li);
 		li.setAttribute("data-index", i + 1);
+		li.innerHTML = "&nbsp;"; //加个空格防止safari下空li不显示
 		setStyle(li, {
 			color: "#fff",
 			listStyleType: "circle",
@@ -51,7 +52,7 @@ window.addEventListener("load", function() {
 		marginTop: -aside.offsetHeight / 2 + "px",
 		right: 0,
 		zIndex: 99,
-		width: "45px"
+		width: "40px"
 	});
 	setStyle(ul, {
 		margin: 0,
