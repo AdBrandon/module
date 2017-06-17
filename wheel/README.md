@@ -17,3 +17,7 @@ This is a [demo](http://htmlpreview.github.io/?https://github.com/AdBrandon/modu
     //需要几页就创建几个div即可
 </body>
 ```
+
+## 兼容性
+支持Chrome、Firefox、Safari、opera、IE10及以上。
+>因为用的原生JavaScript，没有做IE兼容，有空用jQuery再写一个╮(╯▽╰)╭
