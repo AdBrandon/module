@@ -20,3 +20,8 @@ This is a [demo](http://htmlpreview.github.io/?https://github.com/AdBrandon/modu
 
 ## 兼容性
 支持Chrome、Firefox、Safari、opera、IE10及以上。
+
+---
+
+>wheel.jQuery是后写的，稍微优化了一点逻辑，效果更好点。
+
