@@ -139,24 +139,6 @@ window.addEventListener("load", function() {
 				break;
 		}
 	};
-	//导航点击事件
-	var clickEvent = function(event) {
-		var key = event.keyCode;
-		switch (key) {
-			case 37:
-				animation.up();
-				break;
-			case 38:
-				animation.up();
-				break;
-			case 39:
-				animation.down();
-				break;
-			case 40:
-				animation.down();
-				break;
-		}
-	};
 	//liList绑定点击事件
 	for (var i = 0; i < liList.length; i++) {
 		liList[i].addEventListener("click", function() {
