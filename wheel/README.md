@@ -1,4 +1,4 @@
-# wheel
+﻿# wheel
 >使用原生JavaScript，简单模仿jQuery的fullpage插件的全屏滚动
 
 ## 演示
@@ -20,4 +20,3 @@ This is a [demo](http://htmlpreview.github.io/?https://github.com/AdBrandon/modu
 
 ## 兼容性
 支持Chrome、Firefox、Safari、opera、IE10及以上。
->因为用的原生JavaScript，没有做IE兼容，有空用jQuery再写一个╮(╯▽╰)╭
