@@ -85,6 +85,29 @@ $(function() {
 				break;
 		}
 	};
+	//手机端触摸事件
+	var touchClientY = 0,
+		touchTime;
+	$page[0].addEventListener("touchstart", function(event) {
+		touchClientY = event.touches[0].clientY;
+		touchTime = new Date();
+		event.preventDefault();
+	});
+	$page[0].addEventListener("touchend", function(event) {
+		var moveY = event.changedTouches[0].clientY - touchClientY;
+		var touchEndTime = new Date();
+		var moveTime = touchEndTime.getTime() - touchTime.getTime();
+		if (moveY > 70 && moveTime < 700) {
+			wheel.up();
+
+		} else if (moveY < -70 && moveTime < 700) {
+			wheel.down();
+		}
+		touchClientY = 0;
+		touchTime = null;
+		event.preventDefault();
+
+	});
 	//窗口改变大小事件（自适应）
 	var resizeEvent = function() {
 		var width = window.innerWidth;
