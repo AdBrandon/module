@@ -1,2 +1,10 @@
 # module
-自己写的小模块，目前还只有一个，以后会慢慢多起来吧╮(╯▽╰)╭
+> Write less, do more
+
+自己写的小模块
+
+## list
+
+carousel 图片轮播
+
+wheel  全屏滚动
