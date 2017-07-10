@@ -5,6 +5,8 @@
 
 ## list
 
-carousel 图片轮播
+[carousel 图片轮播](https://github.com/AdBrandon/module/tree/master/carousel) 
 
-wheel  全屏滚动
+[wheel 全屏滚动](https://github.com/AdBrandon/module/tree/master/wheel) 
+
+
