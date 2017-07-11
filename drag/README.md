@@ -11,9 +11,11 @@ This is a [demo](http://htmlpreview.github.io/?https://github.com/AdBrandon/modu
 <script type="text/javascript" src="drag.js"></script>
 ```
 2，需要拖拽的元素id为"d_drag"，拖拽指针元素id为"d_target"。
+
 3，固定x轴：#d_drag元素添加属性```x="true"```;
 固定y轴：#d_drag元素添加属性```y="true"```。
 (可使用js动态修改)
+
 4，添加范围：创建范围元素id为"d_container"，设置margin值即可，并为#d_drag元素添加属性```limit="true"```。
 (可使用js动态修改)
 
