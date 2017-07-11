@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drag Demo</title>
+    <script src="../drag.js"></script>
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #d_box {
+        width: 100px;
+        height: 100px;
+        background: #fdfdfd;
+        padding: 5px;
+        border: 1px solid #999;
+    }
+    
+    #d_target {
+        height: 25px;
+        background: #777;
+    }
+    
+    #d_container {
+        width: 800px;
+        height: 500px;
+        margin-left: 200px;
+        margin-top: 50px;
+        background-color: #eee;
+    }
+    </style>
+</head>
+<body>
+    <div id="d_container">
+        <div id="d_box" x="false" y="false" limit="true">
+            <div id="d_target"></div>
+        </div>
+    </div>
+</body>
+
+</html>
