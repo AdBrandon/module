@@ -1,6 +1,6 @@
 # Drag
 
-原生JavaScript，利用面向对象思想实现拖拽模块
+原生JavaScript，利用面向对象思想实现可动态控制范围的拖拽模块
 
 ## 演示
 This is a [demo](http://htmlpreview.github.io/?https://github.com/AdBrandon/module/blob/master/drag/demo/demo.html) .
